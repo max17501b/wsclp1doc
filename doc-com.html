@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>COM Wire</title>
+	<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
+<h2>Installation</h2>
+<h3>Wiring</h3>
+<h4>Identifying the COM Wire</h4>
+<p>
+	If you are replacing a working sprinkler controller you might want
+	to note the color of the common (COM) wire before disconnecting the
+	old controller.
+	If you're not sure, keep reading.
+</p>
+<h5>What you need</h5>
+<ul>
+	<li>All your solenoids wires, disconnected</li>
+	<li>An ohm meter</li>
+</ul>
+<p>
+	Make sure the wall transformer is unplugged and keep the power wires well
+	separated from the solenoid wires.
+</p>
+<h5>Method</h5>
+<p> 
+	Sprinkler solenoids are wired with a "hot" (usually colored) wire for each solenoid,
+	and a common (COM -- usually white) return wire shared by all solenoids.
+	Assuming your wiring and solenoids are in good working order,
+	when you measure the resistance between any two wires you will get
+	one of three results:
+</p>
+<ol>
+	<li>High resistance: open circuit, one or both wires are not used</li>
+	<li>Two-coil resistance: both wires are "hot"</li>
+	<li>One-coil resistance: one wire is COM</li>
+</ol>
+<p>
+	I guess you could also get a low (short circuit) resistance if you have
+	multiple COM wires, but I'd be pretty suspicious if I saw such a measurement.
+	More than likely, this indicates a wiring fault or failed solenoid.
+</p>
+<p>
+	Coil resistance varies, depending on the brand, model and age of your solenoids.
+	New Sunbird solenoids measure around 40 ohms.
+	Older Sunbirds measure 30-32 ohms.
+	Your solenoids should be in this ballpark.
+</p>
+<p>
+	Absolute resistance isn't important. Nor are reasonable variations.
+	What we're looking to distinguish are two-coil vs. one-coil resistance:
+	50-80 ohms vs. 25-40 ohms.
+</p>
+<p>
+	The COM wire will measure the same (one-coil) resistance across all
+	the other wires, or an open circuit across unused wires.
+</p>
+<p>
+	Hot wires will measure two-coil resistance across other hot wires,
+	one-coil resistance across the COM wire, and open circuit across unused wires.	
+</p>
+<p>
+	Unused wires measure open circuit everywhere.
+	Soon as you find one bend it out of the way.
+	No point measuring it over again.
+</p>
+<p>
+	So find that one wire that measures one-coil everywhere, that's your COM.
+	Hint: it is usually the white wire, but check anyway.
+</p>
+</body>
+</html>
