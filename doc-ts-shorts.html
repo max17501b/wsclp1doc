@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Short Circuits</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
+<h2>Troubleshooting</h2>
+<h3>Wiring</h3>
+<h4><a href="doc-ts-shorts.html">Short Circuits</a></h4>
+<p>
+	The WSC-LP1 is protected by a PTC fuse 
+	which trips at 500mA to 1A total current flow from the power transformer.
+	This includes current flow through valve solenoids.  
+</p>
+<p>
+	The electronics in the WSC-LP1 consume less than 25mA A/C current on
+	average, so if the PTC fuse trips it will usually be due to a wiring problem
+	or faulty solenoid.
+</p>
+<p>
+	When the PTC fuse trips, power to the WSC-LP1 electronics and solenoids
+	is cut off immediately.
+	The triacs which switch A/C to the solenoids shut down.
+	Whatever load the controller was powering is shed.
+</p>
+<p>
+	When the PTC fuse detects the current has dropped to safe levels,
+	it automatically reconnects A/C to the WSC-LP1 power supply, 
+	and the system restarts.
+	The controller performs the following safety checks:
+</p>
+<ol>
+	<li>
+		The log files are checked to see if a sprinkler zone was
+		powered on when power was lost.
+		If so the log record is flagged "DNF" and 
+		<i>the zone is placed in isolation or disabled</i>.
+		See below.
+	</li>
+	<li>
+		If a program was scheduled and/or running when power
+		was lost
+		<i>the program is terminated and not rescheduled</i>.
+	</li>
+	<li>
+		Normal operation resumes as soon as the clock is initialized.
+	</li>
+</ol>
+<h5>Zone Isolation and Disabling</h5>
+<p>
+	Isolated zones are shown on the Actvities and Settings pages
+	with the 
+	<img class="status-icon" src="warning.svg"/>
+	icon.
+	When a zone is isolated it is removed from its normal
+	position in watering schedules, and forced to the "back of the line".
+	This allows the other zones to complete their programs before
+	the isolated zone runs.
+</p>
+<p>
+	If a zone is isolated, and a subsequent fault is detected,
+	the zone is disabled.
+	Disabled zones are shown in the Settings page with the
+	<img class="status-icon" src="disabled.svg"/> icon.
+	Disabled zones are removed from manual and scheduled activities.
+	You are responsible for putting the zone back into operation.
+	Hopefully you will examined and fix whatever problems are
+	causing excessive current draws before returning the zone
+	to service.
+</p>
+<h5>What about power outages and intentional restarts?</h5>
+<p>
+	The WSC-LP1 cannot tell the difference bewteen a power outage and
+	a PTC fuse shutdown.
+	So if power goes out while a program is active the controller 
+	will isolate whatever zone was active.
+	After a power loss,
+	<a href="">check the activity log</a>
+	to see if a zone may have been affected. 
+</p>
+<p>
+	Similarly, while zones are active,
+	avoid actions which reset the controller.
+	These actions include 
+	resetting the WIFI configuration,
+	changing the WIFI SSID and
+	downloading new firmware. 
+	If you cannot postpone such actions,
+	at least 
+	<a href="">clear the work queue</a>
+	first.
+</p>
+<h5>Why aren't interrupted programs restarted?</h5>
+<p>
+	It's all about the water police.
+	Where I live we can be fined hard for running
+	sprinklers at the wrong time.
+	I can't think of a fool-proof way to restart a program
+	and guarantee it won't violate local ordinances. 
+</p>
+<p>
+	You're free to restart an interrupted program whenever you want.
+</p>
+</body>
+</html>

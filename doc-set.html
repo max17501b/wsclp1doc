@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Settings</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
+<h2>Operation</h2>
+<h3><a href="doc-set.html">Settings</a></h3>
+<p>
+	<img class="icon" src="setup.svg" />
+	The settings page configures the name, timezone, zone details and
+	other miscellaneous features of the WSC-LP1 controller.
+	You should review these settings once when the controller is first
+	set up, and you'll rarely have to visit this page again.
+</p>
+
+<h4 id="doc-set-name">Controller Name</h4>
+<p>
+	Type a name for your controller.
+	This name will identify the controller on your WIFI network
+	and in your browser.
+</p>
+<p>
+	If you have multiple WSC-LP1 controllers make sure
+	each has a unique name.
+	This makes it easier to distinguish them on your WIFI network,
+	and in your browser.
+</p>
+<p>
+	Your WIFI router may restrict names to alpha-numeric characters, 
+	and the dash and underscore characters.
+	So don't go overboard with exotic names unless you know your
+	network accepts them. 
+</p>
+
+<h4 id= "doc-set-tz">Time Zone</h4>
+<p>
+	Select the time zone for your controller.
+</p>
+<p>
+	In more detail, make sure the controller time zone is the same as
+	your browser time zone.
+	As far as I can tell, modern browsers get their time zone from their host
+	operating system, and you cannot do much to change it.
+	So it's probably safe to say the WSC-LP1 time zone should be the same as
+	the PC/phone/whatever which hosts your browser.
+</p>
+<p>
+	If the WSC-LP1 time zone is out of sync with your browser time zone things
+	can get confusing. 
+	So try to keep them the same.
+</p>
+
+<h4 id="doc-set-zones">Zones</h4>
+<h4 id="doc-set-deadtime">Dead Time</h4>
+<p>
+	When the controller switches from one sprinkler zone to another,
+	there are good reasons to pause for a few seconds.
+	Many of your consumer-grade sprinkler valves rely on water pressure to
+	fully seat the valve in a closed position.
+	A short pause before starting the new zone allows full pressure to develop
+	and helps ensure valves seat properly.
+</p>
+<p>
+	Another benefit involves the triac devices which switch A/C power to the valve
+	solenoids.
+	Traics do not switch off instantly.
+	A short pause before starting a new zone ensures all triacs are fully off
+	before the new zone switches on.
+</p>
+<p>
+	Select a dead time between 1 and 10 seconds.
+	On my own system I use 8 seconds.
+	It takes about 5-6 seconds for my valves to shut off.
+</p>
+<h4 id="doc-set-comcolor">Common Wire Color</h4>
+<p>
+	Record the color of your COM wire here.
+	If you ever have to move or re-wire your controller
+	you will appreciate knowing which is the COM wire.
+</p>
+
+</body>
+</html>

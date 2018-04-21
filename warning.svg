@@ -25,8 +25,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="123.5871"
+     inkscape:zoom="2.8"
+     inkscape:cx="80.27681"
      inkscape:cy="102.46848"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -54,21 +54,11 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-852.36216)">
-    <circle
-       style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#408040;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path6426"
-       cx="99.999992"
-       cy="952.36224"
-       r="85" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#408040;stroke-width:28;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 100.00179,898.13982 -0.0036,63.99841"
-       id="path4134"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#408040;stroke-width:28.00000191;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 100.00399,974.36162 -0.004,27.99858"
-       id="path4134-3"
-       inkscape:connector-curvature="0" />
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#fce94f;fill-opacity:1;fill-rule:nonzero;stroke:#408040;stroke-width:40;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       d="m 100.01242,871.2908 -80.520919,163.3309 161.372239,0.2054 z"
+       id="path4136"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>

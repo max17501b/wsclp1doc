@@ -43,3 +43,18 @@ img {
 	border: 3px solid green;
 	width: 80%;
 }
+
+img.icon {
+	width: 60px;
+	border: none;
+	padding: 0 8px 4px 0;
+	border: 2px solid white;
+	float: left;
+}
+
+img.status-icon {
+	width: 0.8em;
+	border: none;
+	padding: 0;
+	border: 2px solid white;
+}
