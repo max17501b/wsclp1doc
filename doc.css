@@ -75,3 +75,20 @@ h6 {
 	font-size: 0.8em;
 	margin: 1em 0;
 }
+
+.toc h3, .toc h4 {
+	color: #6060A0;
+}
+
+.toc a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.toc a:hover {
+	color: #00A;
+}
+
+td.selector {
+	white-space: nowrap;
+}

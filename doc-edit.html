@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Editing Programs</title>
+	<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
+<h2>Operation</h2>
+<h3>Editing Programs</h3>
+<p>
+	<img class="icon" src="edit.svg"/>
+	The Edit page controls the definition and modification
+	of <i>Programs</i>.
+	A program defines when sprinklers come on,
+	and how long they stay on, and a few other details.
+</p>
+
+<h4 id="editname">Name</a></h4>
+<img class="fieldset" src="editname.png"/>
+<p>
+	Type in a descriptive name for the program.
+</p>
+<p class="warning">
+	There may be a bug in WSC-LP1 version 1.0.8 which
+	will cause problems is program names are duplicated.
+	Take care to ensure program names are unique.
+</p>
+
+<h4 id="editzwt">Zone Water Time</h4>
+<img class="fieldset" src="editzwt.png">
+<p>
+	Type in the watering time (in minutes) for
+	each zone.
+	Times can range from 0 to 120 minutes per zone.
+</p>
+<p class="warning">
+	You can enter time values greater than 120 minutes,
+	but these values will be truncated by the controller
+	and limited to 120 minutes.
+</p>
+
+<h4 id="editschedmet">Schedule Method</h4>
+<img class="fieldset" src="schedmet.png"/>
+<p>
+	The schedule method editor selects one of five
+	methods for scheduling programs.
+</p>
+<table>
+	<tr>
+		<td class="selector">Every Day</td>
+		<td>The program runs at the same time (defined below) every day.</td>
+	</tr>
+	<tr>
+		<td class="selector">Odd Days</td>
+		<td>The program runs at the same time (defined below) every other day, on odd-numbered days.</td>
+	</tr>
+	<tr>
+		<td class="selector">Even Days</td>
+		<td>The program runs at the same time (defined below) every other day, on even-numbered days.</td>
+	</tr>
+	<tr>
+		<td class="selector">Day Of Week</td>
+		<td>The program runs at the same time (defined below) 
+		on specific days of the week (also specified below.)</td>
+	</tr>
+	<tr>
+		<td class="selector">Manual</td>
+		<td>The program can only be 
+		<a href="doc-sched.html#manualstart">started manually</a>.</td>
+	</tr>
+</table>
+
+<h4 id="editst">Start/End Time</h4>
+<img class="fieldset" src="editst.png"/>
+<p>
+	The Start/End Time editor specifies the time-of-day when a program starts
+	or finishes.
+	The editor has two parts:
+	First you choose whether to specify time as a start time,
+	or an end time.
+	"What the hell?" I hear you ask.
+	Start time is obvious.
+	You want the program to start at 08:00 or 16:00 or whatever.
+	It finishes when it's done.
+</p>
+<p>
+	But let's say you live in the land of the water police where
+	watering after 08:00 gets you a big ticket.
+	You have a swell program that finishes at 07:55.
+	But then you notice the petunias look a little parched so you
+	up that zone by 10 minutes and BOOM you get a $200 ticket.
+	Wouldn't it be better to say you don't care when a program starts
+	so long as it <i>ends</i> by 07:55? 
+	That's what the "End at" selector does.
+	The controller automatically starts the program so it finishes
+	at or before the end time.
+</p>
+<p>
+	The actual start/end time is local time, 24-hour format.
+	E.g. 2:00PM = 14:00.
+</p>
+
+<h4 id="editsd">Schedule Days</h4>
+<img class="fieldset" src="editsd.png"/>
+<p>
+	The Schedule Days editor only appears if you have
+	selected the scheduling method "Day Of Week".
+	Pick the days on which you want the program to run.
+	Clicking or tapping a particular day will select
+	or de-select that day.
+</p>
+
+<h4 id="editsb">Soak Breaks</h4>
+<img class="fieldset" src="editsb.png"/>
+<p>
+	Soak breaks interrupt your program to let water
+	percolate and soak into hard ground,
+	or zones prone to run-off.
+	It works by dividing long water times into
+	shorter times,
+	and rotating between zones.
+</p>
+<p>
+	One soak break divides your program into two equal parts.
+	Two soak breaks make three equal parts, etc.
+	Soak breaks add nothing to the actual watering time for a zone,
+	it just breaks the time up.
+</p>
+</body>
+</html>
