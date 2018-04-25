@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Schedules</title>
+	<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
+<h2>Operation</h2>
+<h3>Schedules</h3>
+<p>
+	<img class="icon" src="prog.svg"/>
+	The Schedules page controls the scheduling and
+	details of <i>Programs</i>.
+	A program defines when sprinklers come on,
+	and how long they stay on, and a few other details.
+</p>
+<h4>Schedule Summary</h4>
+<img src="schedule.png" class="fieldset"/>
+<p>
+	First thing on the page a a <i>schedule summary</i>.
+	This tells you
+</p>
+<ul>
+	<li>Whether the scheduler is running or suspended.</li>
+	<li>What program is scheduled next, and roughly when it starts.</li>
+	<li>And buttons are provided to suspend or resume scheduling.</li>
+</ul>
+<p>
+	On the right of the summary is one of two buttons.
+</p>
+<table>
+	<tr>
+		<td><img class="button" src="pause.svg"/></td>
+		<td>Suspends the schedule</td>
+	</tr>
+	<tr>
+		<td><img class="button" src="run.svg"/></td>
+		<td>Resumes the schedule</td>
+	</tr>
+</table>
+<p>
+	When you suspend the scheduler,
+	it stops any future scheduled activity
+	until you resume scheduling.
+	You might do that for instance if you see rain forecast
+	and you don't expect to need the sprinklers for a few days.
+</p>
+<p>
+	Currently running programs continue to completion.
+	Programs which are due to run are skipped until scheduling is resumed.
+</p>
+<p>
+	To immediately turn off all running programs use the
+	<a href="doc-act">Activities Page</a>.
+</p>
+
+
+<h4>Program Summaries</h4>
+<img src="progsum.png" class="fieldset"/>
+<p>
+	A program summary is displayed for each program stored on the controller.
+	The controller comes with a built-in program called 
+	"Zone Test" which will be used for illustration.
+	The summary shows the program name (Zone Test),
+	how it is scheduled (manual start) and
+	how long it runs (6 minutes).
+	There are also three buttons associated with each
+	program:
+</p>
+<table>
+	<tr>
+		<td><img class="button" src="edit.svg"/></td>
+		<td>Runs an editor so you can 
+		<a href="doc-sched-edit.html">change the program details</a>.</td>
+	</tr>
+	<tr>
+		<td><img class="button" src="run.svg"/></td>
+		<td>Runs the program right here and now. This is the only way to
+		run manual-start programs.</td>
+	</tr>
+	<tr>
+		<td><img class="button" src="delete.svg"/></td>
+		<td>Deletes the program. There is no "undo".
+		But programs are stupid-easy to recreate so
+		don't freak out.</td>		
+	</tr>
+</table>
+
+<h4>Create Your Own Programs</h4>
+<p>
+	Click on the "Create a New Program"
+	to
+	<a href="doc-sched-edit.html">make your own programs</a>.
+</p>
+</body>
+</html>

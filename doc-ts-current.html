@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Measuring Zone Current</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
+<h2>Troubleshooting</h2>
+<h3>Wiring</h3>
+<h4>Measuring Solenoid Current</h4>
+<p>
+	What you need:
+</p>
+<ul>
+	<li>A volt meter capable of measuring 10-50 millivolts A/C</li>
+	<li>Your WSC-LP1</li>
+</ul>
+<h5>Start the zone under test</h5>
+<p>
+	Using the 
+	Activities Page
+	or the
+	<a href="doc-set-setup.html">Zone Setup Dialog</a>,
+	start the zone you wish to measure.
+	Observe the LEDs on the WSC-LP1 and confirm the correct
+	zone if running.
+</p>
+<h5>Measure the voltage</h5>
+<p>
+	Make sure your meter is set for "volts A/C" or "millivolts A/C"
+	and measure the voltage between the test point "TP" and either
+	COM terminal. 
+</p>
+<img src="meter.svg"/>
+<h5>Multiply by 10</h5>
+<p>
+	Multiply the voltage measurement by ten to get
+	A/C current.
+	E.g. 31mV = 310mA.
+</p>
+<p>
+	Note the startup current through the solenoid can be several times higher than
+	the steady-state A/C,
+	but this transient current is not dangerous nor will it normally trip the PTC fuse.
+</p>
+<h5>So What?</h5>
+<p>
+	If a zone has been <a href="doc-ts-shorts">isolated</a>
+	it is a good idea to measure the zone current before  
+	<a href="doc-set.html#doc-set-zone-status">putting the zone back into regular service</a>.
+	You should compare it to other zones you know are working.
+	Allowing a solenoid to operate which is drawing high current
+	cannot be a good thing in the long run.
+</p>
+</body>
+</html>

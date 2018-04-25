@@ -9,7 +9,7 @@
 <body>
 <h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
 <h2>Operation</h2>
-<h3><a href="doc-set.html">Settings</a></h3>
+<h3>Settings</h3>
 <p>
 	<img class="icon" src="setup.svg" />
 	The settings page configures the name, timezone, zone details and
@@ -56,6 +56,56 @@
 </p>
 
 <h4 id="doc-set-zones">Zones</h4>
+<p>
+	The WSC-LP1 supports up to six sprinkler solenoids,
+	called "zones".
+	The settings page lists each zone
+	along with its status, description and a setup button.
+</p>
+<h5>The zone status icon</h5>
+<p>
+	Zone status is indicated by these icons:
+	<table>
+		<tr>
+			<td><img class="status-icon" src="check.svg"/></td>
+			<td>Zone is ready, good to go.</td>
+		</tr>
+		<tr>
+			<td><img class="status-icon" src="warning.svg"/></td>
+			<td>
+				Zone is <i>isolated</i>.
+				A zone is isolated if it is suspected of
+				<a href="doc-ts-shorts.html">drawing excessive current</a>.
+				Isolated zones are taken out of the normal program order
+				and run after all other zones have finished.
+			</td>
+		</tr>
+		<tr>
+			<td><img class="status-icon" src="disabled.svg"/></td>
+			<td>
+				Zone is <i>disabled</i>.
+				Disabled zones are removed from normal operations.
+				They can only be run via the 
+				<a href="doc-set-setup.html">setup test procedure</a>.
+			</td>
+		</tr>
+	</table>
+</p>
+<h5 id="doc-set-zone-status">Changing zone status</h5>
+<p>
+	To change a zones status click or tap on the zone icon.
+	Clicking a ready zone disables it.
+	Clicking an isolated zone disables it.
+	Clicking a disabled zone readies it.
+</p>
+<h5>Using the Setup Button</h5>
+<p>
+	Click or tap the Setup button to configure the
+	description, order and wire color for a zone.
+	Setup also allows testing disabled zones.
+	For more details see 
+	<a href="doc-set-setup.html">Zone Setup Procedures</a>. 
+</p>
 <h4 id="doc-set-deadtime">Dead Time</h4>
 <p>
 	When the controller switches from one sprinkler zone to another,

@@ -10,15 +10,18 @@
 <h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
 <h2>Troubleshooting</h2>
 <h3>Wiring</h3>
-<h4><a href="doc-ts-shorts.html">Short Circuits</a></h4>
+<h4>Excessive Current and Short Circuits</h4>
+<p>
+	See also <a href="doc-ts-current.html">Measuring Solenoid Current</a>.
+</p>
 <p>
 	The WSC-LP1 is protected by a PTC fuse 
 	which trips at 500mA to 1A total current flow from the power transformer.
 	This includes current flow through valve solenoids.  
 </p>
 <p>
-	The electronics in the WSC-LP1 consume less than 25mA A/C current on
-	average, so if the PTC fuse trips it will usually be due to a wiring problem
+	The electronics in the WSC-LP1 consume less than 25mA A/C current, 
+	so if the PTC fuse trips it will usually be due to a wiring problem
 	or faulty solenoid.
 </p>
 <p>
@@ -37,7 +40,7 @@
 	<li>
 		The log files are checked to see if a sprinkler zone was
 		powered on when power was lost.
-		If so the log record is flagged "DNF" and 
+		If so, the log record for that zone is flagged "DNF" and 
 		<i>the zone is placed in isolation or disabled</i>.
 		See below.
 	</li>
@@ -68,7 +71,9 @@
 	<img class="status-icon" src="disabled.svg"/> icon.
 	Disabled zones are removed from manual and scheduled activities.
 	You are responsible for putting the zone back into operation.
-	Hopefully you will examined and fix whatever problems are
+	You should
+	<a href="doc-ts-current.html">examine</a>
+	and fix whatever problems are
 	causing excessive current draws before returning the zone
 	to service.
 </p>
