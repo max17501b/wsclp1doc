@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Activity Page</title>
+	<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<h1><a href="doc-index.html">WSC-LP1 User Manual</a></h1>
+<h2><a href="doc-op.html">Operation</a></h2>
+<h3>Activities</h3>
+<p>
+	<img class="icon" src="status.svg"/>
+	The Activities Page shows the status of your enabled watering zones
+	and the activity currently queued to run.
+	You can turn zones on and off.
+	You can pause, resume and purge the work queue.
+	And you can view the Activity Log.
+</p>
+<h4 id="actzones">Zone Status</h4>
+<img class="fieldset" src="actzones.png"/>
+<p>
+	The zone status display lists all your 
+	<a href="doc-set.html#doc-set-zones">enabled zones</a>
+	and their current status.
+	The <img class="button" src="zoneoff.png"/>
+	icon signifies the zone is off.
+	The <img class="button" src="zoneon.png"/>
+	icon signifies the zone is on.
+</p>
+<h4 id="zoneonoff">Turning zone on &amp; off</h4>
+<p>
+	You can manually turn zones on and off clicking or tapping the
+	zone status icon.
+	Turning off an active zone removes its entry from the work queue.
+	The next job in line becomes active.
+</p>
+<p>
+	Turning on an inactive zone puts a new job entry at the front
+	of the work queue.
+	The job runs for 60 second.
+	Any current activity is postponed.
+	Normal operation resumes when the newly inserted job finishes.
+</p>
+
+<h4 id="actwq">Work Queue</h4>
+<img class="fieldset" src="wq.png"/>
+<p>
+	The Work Queue is a list of watering activity ready to go.
+	Each entry in the queue comprises a zone and a duration.
+	When an entry reaches the top of the queue, that zone is
+	turned on and left on for the specified duration.	
+</p>
+<p>
+	Entries get into the work queue in several ways:
+</p>
+<ul>
+	<li>When the start time of a scheduled program is reached
+	the program is divided into entries and inserted in the queue.</li>
+	<li>If you manually start a program it is divided into entries
+	and inserted in the queue.</li>
+	<li>If you manually start or test a zone
+	a single 60-second entry is inserted at the front of the queue.</li>
+</ul>
+<h4 id="actmanwq">Managing the Work Queue</h4>
+<p>
+	The work queue display includes one or more buttons on the
+	right margin which you can use to manage the queue.
+</p>
+<table>
+	<tr>
+		<td><img class="button" src="pause.svg"/></td>
+		<td>Click this button to <i>pause</i> the work queue.
+		All activity stops and remains in queue.</td>
+	</tr>
+	<tr>
+		<td><img class="button" src="run.svg"/></td>
+		<td>Click this button to <i>resume</i> the work queue.
+		Activity resumes with the top-most entry.</td>
+	</tr>
+	<tr>
+		<td><img class="button" src="delete.svg"/></td>
+		<td>Click this button to clear the work queue.
+		All pending entries are removed.
+		There is no "undo" for this action.</td>
+	</tr>
+</table>
+<p>
+	You use the pause/resume sequence to temporarily stop watering.
+	Maybe you want to fix a sprinkler head or someone is working in the
+	area and doesn't need watering. 
+</p>
+<p>
+	Use the clear button the immediately stop and remove all queued work.
+	You might use this if a program got started by accident,
+	or the forecast changes and you don't want to finish an
+	already-scheduled program.
+</p>
+
+<h4 id="actlog">The Activity Log</h4>
+<img class="fieldset" src="actlog.png"/>
+<p>
+	Click the Activity Log button to view the latest
+	watering activity.
+	The date, time, zone and duration of each
+	zone operation is listed,
+	in reverse-time order.
+	The report includes 75 of the most-recent watering events.
+	Depending on your watering schedule this may span
+	several weeks. 
+</p>
+<p>
+	If you find a zone has been isolated or automatically disabled,
+	look in this report and you should see one or more records
+	listing the zone as "DNF".
+	This means the zone was started but did not finish,
+	indicative of an 
+	<a href="doc-ts-shorts.html">over-current shutdown</a> 
+	of the controller.
+</p>
+</body>
+</html>
